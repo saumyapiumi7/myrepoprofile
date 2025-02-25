@@ -12,10 +12,13 @@ This project is a simple, responsive navbar that dynamically loads content from 
 - **Footer Loading:** The footer content is loaded dynamically from a separate HTML file.
 
 ## Preview
-(Capture.PNG)
+![Capture](https://github.com/user-attachments/assets/6add8ab1-2836-4e4e-899a-6481b688388c)
 
 ## Demo 
-(video.mp4)
+
+https://github.com/user-attachments/assets/8ab1a44e-729b-43c1-bc96-86ebcb9d85ce
+
+
 
 
 ## How It Works
