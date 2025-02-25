@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0B0B0B;
+            padding: 15px;
+            height: 90px;
+            top: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 60%;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Common Button Styles */
+        .btn {
+            width: 140px;
+            height: 45px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-inline-start: 30px;
+            background: #0B0B0B;
+            color: #FFF;
+            border: 2px solid #FFF;
+        }
+
+        .btn:hover {
+            background-color: #adabab;
+            color: #0B0B0B;
+        }
+
+        .btn-contact {
+            background: #FFF;
+            color: #0D0D0D;
+            border: 2px solid #FFF;
+        }
+
+        .btn-contact:hover {
+            background-color: #adabab;
+            color: #FFF;
+        }
+
+        /* Active Button Underline Effect */
+        .btn.active {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+
+        /* Main Content */
+        #main-content {
+            padding: 20px;
+            min-height: 300px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) { /* Tablets */
+            .navbar {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) { /* Mobile */
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .btn {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <div class="header">
+        <div class="navbar">
+            <button class="btn btn-home" onclick="navigateTo('hero.html', this)">Home</button>
+            <button class="btn btn-about" onclick="navigateTo('about.html', this)">About Me</button>
+            <button class="btn btn-work" onclick="navigateTo('work.html', this)">Works</button>
+            <button class="btn btn-contact" onclick="navigateTo('contact.html', this)">Contact Me</button>
+        </div>
+    </div>
+
+    <!-- Dynamic Content Section -->
+    <div id="main-content"></div>
+
+    <!-- Footer Section (Loaded Dynamically) -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function navigateTo(page, btnElement) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("main-content").innerHTML = data;
+
+                    // Remove 'active' class from all buttons
+                    document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+
+                    // Add 'active' class to the clicked button
+                    btnElement.classList.add('active');
+                })
+                .catch(error => console.error("Error loading " + page, error));
+        }
+
+        // Footer Load Function
+        function loadFooter() {
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading footer.html", error));
+        }
+
+        // Load hero.html on page load
+        window.onload = function() {
+            const defaultButton = document.querySelector(".btn-home");
+            navigateTo("hero.html", defaultButton);
+            loadFooter();
+        };
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+
+        }
+
+        body {
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+        }
+
+        .hero {
+    display: flex;
+    height: 500px; /* Fixed height */
+    border-radius: 15px;
+}
+
+        .text-section {
+            flex: 1;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 0px;
+        }
+
+        .intro {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-top: -30px;
+        }
+
+        .name {
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-top: 10px;
+        }
+
+        .heade {
+            font-size: 15px;
+            font-weight: 800;
+            color: #5f5f5f;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .linktree {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 140px;
+            height: 45px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 10px;
+            margin: 5px;
+            background-color: #adabab;
+            color: #0B0B0B;
+            margin-top: 30px;
+            margin-left: 40%;
+            cursor: pointer;
+            border: none;
+            
+            text-align: center;
+        }
+
+        .linktree:hover {
+            background: #0B0B0B;
+            color: #FFF;
+            border: 2px solid #FFF;
+        }
+
+        .btn-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .image-section {
+    flex: 1;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px;
+    width: 50%;
+    height: 500px; /* Fixed height */
+    margin-top: -25px;
+    margin-right: -30px;
+}
+
+        .imglayout {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            box-shadow: 2px 10px 15px rgba(0, 0, 10, 0.5);
+            border: 2px solid #474306;
+            object-fit: cover;
+            margin-left: 100px;
+        }
+
+        .imgicon1 {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 80px;
+            right: 120px;
+        }
+
+        .imgicon2 {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            bottom: 100px;
+            left: 180px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .text-section {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .image-section {
+                padding: 20px;
+            }
+
+            .name {
+                font-size: 50px;
+            }
+
+            .heade {
+                font-size: 18px;
+                margin-left: 0;
+            }
+
+            .imglayout {
+                width: 280px;
+                height: 280px;
+            }
+
+            .linktree {
+                width: 250px;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+                background: #868686;
+                color: #0D0D0D;
+                border: 2px solid #FFF;
+            }
+
+            .linktree:hover {
+                background-color: #d1d1d1;
+                color: #0D0D0D;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="text-section">
+            <h1 class="intro">Hi, I am</h1>
+            <h1 class="name">Saumya Herath</h1>
+            <p class="heade">Front-End Developer / UI Designer</p>
+            <button class="linktree">
+                <img src="Images/simple-icons_linktree.svg" alt="" class="btn-icon">LinkTree
+            </button>
+        </div>
+        <div class="image-section">
+            <img src="Images/unsplash_d1UPkiFd04A.png" alt="" class="imglayout">
+            <img src="Images/Group 10.svg" alt="" class="imgicon1">
+            <img src="Images/Group 6.svg" alt="" class="imgicon2">
+        </div>
+    </div>
+</body>
+</html>

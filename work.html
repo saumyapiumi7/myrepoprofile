@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            align-items: center;
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+
+        }
+
+        body {
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+            text-align: center;
+            align-items: center;
+
+        }
+
+        .work {
+            height: 500px; /* Fixed height */
+            border-radius: 15px;
+            align-items: center;
+        }
+        .worktitle {
+            font-size: 22px;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: -15px;
+
+   
+    color: #333;
+    border: 2px solid black; /* Black border */
+    display: inline-block; /* Ensures the box fits the text */
+    border-radius: 0px;
+}
+
+        .disc {
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 900px;
+            margin: 5px auto;
+            line-height: 1.6;
+            
+        }
+
+        /* Grid layout for responsiveness */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: -0px;
+            justify-content: center;
+            padding-top: 20px;
+            margin-right: 100px;
+            margin-left: 100px;
+
+            
+        }
+
+        .card {
+            width: 60%;
+            max-width: 300px;
+            background:  #ececec;
+            border-radius: 10px;
+            text-align: left;
+            padding: 10px;
+
+            margin: 0 auto;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-description {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Button styling */
+        .more {
+            margin-top: 30px;
+            width: 900px;
+            height: 40px;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 550;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border-radius: 12px;
+            border: 0.4px solid #6D6969;
+            background: #080808;
+            padding: 10px 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0px;
+            margin-top: 20px;
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+
+        }
+        
+
+        /* Hover effect for card */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect for More Designs button */
+        .more:hover {
+            background-color: #b6b5b5;
+            transform: scale(1.05);
+            color: #000000;
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .disc {
+                font-size: 16px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr; /* Stack cards vertically */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .workbox {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .disc {
+                font-size: 14px;
+            }
+
+            .more {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="worktitle">Works</div>
+
+
+    <div class="work">
+        <p class="disc">Passionate about creating innovative, user-centered solutions that drive results and enhance experiences, delivering value through design and technology.</p>
+        
+        <div class="cards-container">
+            <div class="card">
+                <img src="Images/1.png" alt="work1">
+                <h1 class="card-title">Web Design</h1>
+                <p class="card-description">Cake Flavors Page Design</p>
+            </div>
+            <div class="card">
+                <img src="Images/2.png" alt="work2">
+                <h1 class="card-title">App Design</h1>
+                <p class="card-description">Music Listening App Design</p>
+            </div>
+            <div class="card">
+                <img src="Images/3.png" alt="work3">
+                <h1 class="card-title">Graphic Design</h1>
+                <p class="card-description">Custom T-Shirt Design</p>
+            </div>
+        </div>
+        <button class="more">More Designs</button>
+
+    </div>
+
+</body>
+</html>

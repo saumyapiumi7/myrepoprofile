@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Montserrat, monospace, sans-serif, 'Courier New', Courier, monospace;
+
+
+        }
+        .contact{
+            height: 500px;
+            flex-shrink: 0;
+            background: #ffffff;
+
+        }
+        .ContactTitle {
+            font-size: 22px;
+    font-weight: 700;
+    padding: 5px;
+    margin-top: -15px;   
+    color: #0a0a0a;
+    border: 2px solid rgb(8, 8, 8); /* Black border */
+    display: inline-block; /* Ensures the box fits the text */
+    border-radius: 0px;
+}
+
+       
+        form{
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 50%;
+            padding: 0px;
+            font-size: 15px;
+            
+        }
+        .formInput{
+            width: 100%;
+            height: 40px;
+            border-top: 0px;
+            border-right: 0px;
+            background-color: #0a0a0a;
+            padding: 5px;
+            font-size: 15px;
+            border-width: 2px;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+        .formtxt{
+            width: 100%;
+            height: 100px;
+            border-top: 0px;
+            border-right: 0px;
+            padding: 5px;
+            background-color: #0a0a0a;
+            font-size: 15px;
+            border-width: 2px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+
+
+            
+        }
+        .SUBMIT{
+            margin-top: 10px;
+            width: 150px;
+            height: 40px;
+            background-color: #0a0a0a;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-top:0px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin: 0 auto;
+           
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="ContactTitle">Contact Me</div>
+    <div class="contact">
+            
+        </div>
+
+    </div>
+    <div>
+        <form >
+            <input type="text" name="name" placeholder="ENTER YOUR NAME" class="formInput">
+            <input type="email" name="email" placeholder="ENTER YOUR EMAIL" class="formInput">
+            <input type="text" name="phone" placeholder="PHONE NUMBER" class="formInput">
+            <textarea name="message" placeholder="YOUR MESSAGE" class="formtxt"></textarea>
+            <input type="submit" value="SUBMIT" class="SUBMIT">
+        </form>
+    </div>
+    
+    
+</body>
+</html>
